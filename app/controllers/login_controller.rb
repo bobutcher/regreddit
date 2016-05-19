@@ -1,6 +1,5 @@
 class LoginController < ApplicationController
   def new
-
   end
 
   def create
@@ -19,6 +18,6 @@ class LoginController < ApplicationController
   end
 
   def user_params
-    params.require(:i_will_be_a_key_in_params).permit(:email, :password)
+    params.permit(:email, :password)
   end
 end
