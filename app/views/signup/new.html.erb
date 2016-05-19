@@ -1,1 +1,14 @@
-<h1>Sign Up for Regreddit</h1>
+<h1>Sign up for Regreddit!</h1>
+<%= form_for :user do |f| %> <br>
+<%= f.label :email %> <br>
+<%= f.text_field :email %>
+
+<br>
+<br>
+
+<%= f.label :password %><br>
+<%= f.text_field :password %><br>
+<br>
+<%= f.submit %>
+
+<% end %>

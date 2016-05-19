@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get 'login' => "login#new"
   post 'login' => "login#create"
   root 'login#new'
+  get 'signup' => "signup#new"
+  post 'signup' => "signup#create"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

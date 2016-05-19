@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   validates :password, confirmation: true
 
   def password
-    @password ||= BCrypt::Password.new(password_hash)
+    @password ||= BCrypt::Password.new(password_hash) unless password_hash == nil
   end
 
   def password=(password)
