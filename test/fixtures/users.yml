@@ -5,5 +5,5 @@ one:
   password_hash: <%=  BCrypt::Password.create('password') %>
 
 two:
-  email: MyString
+  email: bo@bo.com
   password_hash: <%=  BCrypt::Password.create('password') %>
