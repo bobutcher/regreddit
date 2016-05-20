@@ -7,7 +7,7 @@ class SignupController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      redirect_to root_path
+      redirect_to links_path
     else
       render :new, status: :unauthorized
     end

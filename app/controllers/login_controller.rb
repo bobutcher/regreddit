@@ -6,7 +6,7 @@ class LoginController < ApplicationController
     @user = User.find_by(email: user_params[:email])
     if @user && @user.password == user_params[:password]
       session[:user_id] = @user.id
-      redirect_to root_path
+      redirect_to links_path
     else
       redirect_to login_path
     end

@@ -8,7 +8,7 @@ class LoginControllerTest < ActionController::TestCase
 
   test "should login user if user is present" do
     get :create, email: 'mike@mikeiscool.com',  password: 'password'
-    assert_redirected_to root_path
+    assert_redirected_to links_path
   end
 
   test "should logout" do
