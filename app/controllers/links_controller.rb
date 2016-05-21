@@ -25,10 +25,11 @@ class LinksController < ApplicationController
   # POST /links.json
   def create
     @link = Link.new(link_params)
+    @link.user_id = current_user.id
 
     respond_to do |format|
       if @link.save
-        format.html { redirect_to @link, notice: 'Link was successfully created.' }
+        format.html { redirect_to @link, notice: 'Link was successfully created.'}
         format.json { render :show, status: :created, location: @link }
       else
         format.html { render :new }
@@ -42,7 +43,7 @@ class LinksController < ApplicationController
   def update
     respond_to do |format|
       if @link.update(link_params)
-        format.html { redirect_to @link, notice: 'Link was successfully updated.' }
+        format.html { redirect_to @link, notice: 'Link was successfully updated.'}
         format.json { render :show, status: :ok, location: @link }
       else
         format.html { render :edit }

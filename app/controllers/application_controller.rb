@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   end
 
   def current_user
-    @user ||= User.where(id: session[:user_id])
+    @user ||= User.find_by(id: session[:user_id])
   end
 
   helper_method :current_user

@@ -18,6 +18,6 @@ class LoginController < ApplicationController
   end
 
   def user_params
-    params.permit(:email, :password)
+    params.require(:login).permit(:email, :password)
   end
 end
