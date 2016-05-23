@@ -1,5 +1,5 @@
 <h1>Sign up for Regreddit!</h1>
-<%= form_for @user do |f| %> <br>
+<%= form_for @user, url: signup_path do |f| %> <br>
 <%= f.label :email %> <br>
 <%= f.text_field :email %>
 
