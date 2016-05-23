@@ -18,6 +18,7 @@ class LinksControllerTest < ActionController::TestCase
 
   test "should create link" do
     assert_difference('Link.count') do
+      session[:user_id] = users(:one).id
       post :create, link: { title: @link.title, url: @link.url, user_id: @link.user_id }
     end
 
