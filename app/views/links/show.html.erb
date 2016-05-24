@@ -2,7 +2,7 @@
 
 <p>
   <strong>User:</strong>
-  <%= @link.user_id %>
+  <%= @link.user.email %>
 </p>
 
 <p>
@@ -19,6 +19,8 @@
   <%= form_for @link.comments.build do |f| %>
   <%= f.label :body %> <br>
   <%= f.text_area :body %> <br>
+  <% f.label :link_id %> <br>
+  <%= f.hidden_field :link_id %>
   <%= f.submit  %>
   <% end %>
 </p>
@@ -33,5 +35,11 @@
 
     <%= @link.comments.build.inspect %>
 
+  </code>
+</pre>
+
+<pre>
+  <code>
+    <%= @link.id.inspect %>
   </code>
 </pre>
