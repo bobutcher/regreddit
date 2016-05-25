@@ -35,5 +35,4 @@ ActiveRecord::Schema.define(version: 20160517211708) do
     t.datetime "updated_at",    null: false
     t.string   "password_hash"
   end
-
 end
