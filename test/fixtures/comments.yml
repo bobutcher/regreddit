@@ -2,10 +2,10 @@
 
 one:
   body: MyText
-  link_id: 1
-  user_id: 1
+  link_id: one
+  user: one
 
 two:
   body: MyText
-  link_id: 1
-  user_id: 1
+  link_id: two
+  user: two

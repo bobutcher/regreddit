@@ -1,4 +1,4 @@
-require 'test_helper'
+ require 'test_helper'
 
 class CommentsControllerTest < ActionController::TestCase
   setup do
@@ -18,6 +18,7 @@ class CommentsControllerTest < ActionController::TestCase
 
   test "should create comment" do
     assert_difference('Comment.count') do
+      session[:user_id] = users(:one).id
       post :create, comment: { body: @comment.body, link_id: @comment.link_id, user_id: @comment.user_id }
     end
 
